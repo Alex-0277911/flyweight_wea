@@ -1,0 +1,16 @@
+@startuml
+set namespaceSeparator ::
+
+class "flyweight_wea::flyweight.dart::Flyweight" {
+  -String _sharedState
+  +void operation()
+}
+
+class "flyweight_wea::flyweight.dart::FlyweightFactory" {
+  -Map<String, Flyweight> _flyweights
+  +Flyweight? getFlyweight()
+  +void listFlyweights()
+}
+
+
+@enduml
